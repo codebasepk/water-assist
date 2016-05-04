@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WaterAssist</string>
+    <string name="drain_assist">Drain Assist</string>
+    <string name="water_assist">Water Assist</string>
+    <string name="plumber_assist">Plumber Assist</string>
+    <string name="home_buyer_assist">Home Buyer Assist</string>
+    <string name="building_assist">Building Assist</string>
+</resources>

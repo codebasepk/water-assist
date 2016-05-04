@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.byteshaft.waterassist.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/drain_assist"
+        android:text="@string/drain_assist"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/drain_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/water_assist"
+        android:text="@string/water_assist"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/drain_assist"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/water_assist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/plumber_assist"
+        android:text="@string/plumber_assist"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/water_assist"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/plumber_assist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/home_buyer_assist"
+        android:text="@string/home_buyer_assist"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/plumber_assist"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/home_assist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/building_assist"
+        android:text="@string/building_assist"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/home_buyer_assist"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/building_assist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
