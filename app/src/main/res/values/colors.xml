@@ -6,8 +6,8 @@
     <color name="button_unpressed">#F26B25</color>
     <color name="button_pressed">#F6921E</color>
     <color name="gray">#939393</color>
-    <color name="plumber_normal">#F9514E</color>
-    <color name="plumber_pressed">#e04846</color>
+    <color name="plumber_normal">#FF8A65</color>
+    <color name="plumber_pressed">#FF5722</color>
     <color name="home_assist_normal">#C29254</color>
     <color name="home_assist_pressed">#9b7443</color>
     <color name="building_assist_normal">#C7B6AE</color>
