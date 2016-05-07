@@ -18,7 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".DrainAssistActivity"/>
-        <activity android:name=".BuildingAssistActivity"/>
+
+        <activity android:name=".BuildingAssistActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
         <activity android:name=".HomeAssistActivity"/>
         <activity android:name=".WaterAssistActivity"/>
         <activity android:name=".PlumberActivity"/>
