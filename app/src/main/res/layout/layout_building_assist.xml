@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical">
+    android:focusableInTouchMode="true" >
 
 
 
@@ -63,7 +62,8 @@
             android:text="Enter the details" />
 
         <EditText
-            android:hint="Details goes here"
+            android:id="@+id/building_assist_et"
+            android:hint="Details goes here..."
             android:inputType="textMultiLine"
             android:layout_marginTop="2dp"
             android:layout_below="@+id/tv"
