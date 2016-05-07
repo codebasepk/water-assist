@@ -5,4 +5,12 @@
     <string name="plumber_assist">Plumber Assist</string>
     <string name="home_buyer_assist">Home Buyer Assist</string>
     <string name="building_assist">Building Assist</string>
+
+    <string name="emergency_unblock">Emergency Unblock</string>
+    <string name="drainage_survey">Drainage Survey</string>
+    <string name="drainage_repairs">Drainage Repairs</string>
+    <string name="septic_or_treatment_tank">Septic or Treatment Tank</string>
+    <string name="new_installation">New Installation</string>
+    <string name="maintenance"> Maintenance</string>
+
 </resources>
