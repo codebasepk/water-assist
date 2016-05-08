@@ -2,87 +2,112 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:focusable="true"
-    android:focusableInTouchMode="true" >
+    android:background="@color/gray">
 
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:src="@drawable/drain_assist_for_package" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/image_view"
+        android:background="#F76C30" />
 
     <TextView
-        android:id="@+id/tv_2"
+        android:textColor="#F76C30"
+        android:text=" EMERGENCY"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:text="Select Survey"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/tv"
-        android:layout_alignStart="@+id/tv"
-        android:layout_marginTop="49dp" />
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="75dp"/>
+    <TextView
+        android:textColor="#1483C8"
+        android:text="UNBLOCK"
+        android:textSize="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="205dp"/>
 
     <RadioGroup
-        android:id="@+id/radio_group_home_assist"
+        android:id="@+id/radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="80dp">
+        android:gravity="center_vertical"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp">
 
         <RadioButton
             android:id="@+id/home_buyer_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home Buyer Survey" />
+            android:text="Home Buyer Survey"
+            android:textSize="15dp" />
+
         <RadioButton
-            android:id="@+id/Home_drain_survey"
+            android:id="@+id/home_drain_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home Buyer Drain Survey"/>
+            android:text="Home Buyer Drain Survey"
+            android:textSize="15dp" />
 
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:layout_below="@+id/radio_group_home_assist"
-        android:text="Provide details" />
-
-    <EditText
-        android:id="@+id/water_assist_et"
-        android:hint="Details goes here..."
-        android:inputType="textMultiLine"
-        android:layout_marginTop="2dp"
-        android:layout_below="@+id/tv"
-        android:lines="4"
-        android:minLines="4"
-        android:gravity="top|left"
-        android:maxLines="10"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:scrollbars="vertical" />
-
-    <Button
-        android:id="@+id/submit_button"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:padding="15dp"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textSize="17sp"
-        android:text="Submit" />
+        android:layout_below="@+id/radio_group"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:id="@+id/layout_et"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp">
 
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Details"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="9dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/home_assist_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="provide details here.."
+            android:lines="4"
+            android:minLines="4"
+            android:gravity="top|left"
+            android:textSize="15dp"
+            android:layout_below="@+id/tv"
+            android:background="@android:drawable/edit_text" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_home_assist"
+        android:text="Submit"
+        android:textColor="#F76C30"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"/>
 </RelativeLayout>
