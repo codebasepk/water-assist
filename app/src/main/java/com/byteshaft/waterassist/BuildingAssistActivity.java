@@ -13,7 +13,7 @@ public class BuildingAssistActivity extends AppCompatActivity {
     private EditText details;
     private Button submitButton;
     private RadioGroup radioGroup;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().setBackgroundDrawable(new
@@ -23,7 +23,7 @@ public class BuildingAssistActivity extends AppCompatActivity {
         setContentView(R.layout.layout_building_assist);
 
         details = (EditText) findViewById(R.id.building_assist_et);
-        submitButton = (Button) findViewById(R.id.submit_button);
+        submitButton = (Button) findViewById(R.id.btn_building_assist);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
     }
 }
