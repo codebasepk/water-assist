@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        android:src="@drawable/drain_assist_for_package" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/image_view"
+        android:background="#F76C30" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="93dp"
+        android:text="NEW"
+        android:textColor="#F76C30"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="142dp"
+        android:text="INSTALLATION"
+        android:textColor="#1483C8"
+        android:textSize="20dp" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/button">
+
+        <TextView
+            android:id="@+id/foul_drainage_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Foul Drainage"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/foul_drainage_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
+            android:hint="enter details"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/surface_water_drainage_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Surface Water Drainage"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/surface_water_drainage_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lining_tv"
+            android:background="@android:drawable/edit_text"
+            android:hint="enter details"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/septic_tank_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Septic Tank"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/septic_tank_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter details"
+            android:background="@android:drawable/edit_text"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/other_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text=" Other"
+            android:textColor="#000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/other_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
+            android:hint="enter details"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="Submit"
+        android:textColor="#F76C30"
+        android:id="@+id/button" />
+</RelativeLayout>
