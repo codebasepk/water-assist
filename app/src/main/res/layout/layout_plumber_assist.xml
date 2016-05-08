@@ -20,32 +20,45 @@
         android:background="#F76C30" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="102dp"
+        android:text="PLUMBER"
         android:textColor="#F76C30"
-        android:text=" EMERGENCY"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        android:layout_marginLeft="75dp"/>
-    <TextView
-        android:textColor="#1483C8"
-        android:text="UNBLOCK"
-        android:textSize="20dp"
+        android:textSize="20dp" />
 
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view"
-        android:layout_marginLeft="205dp"/>
+
+        android:layout_marginLeft="198dp"
+        android:text="ASSIST"
+        android:textColor="#1483C8"
+        android:textSize="20dp" />
+
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:layout_below="@+id/view"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="90dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:text="Select Assistance :"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/repair_plumbing"
@@ -55,59 +68,52 @@
             android:textSize="15dp" />
 
         <RadioButton
-            android:id="@+id/renewal_plumbing"
+            android:id="@+id/renewal_of_plumbing_installation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Renewal of plumbing Installation"
             android:textSize="15dp" />
-
     </RadioGroup>
 
     <RelativeLayout
+        android:id="@+id/layout_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radio_group"
         android:layout_margin="10dp"
-        android:orientation="vertical"
-        android:id="@+id/layout_et"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
             android:text="Enter Details"
             android:textColor="#000000"
             android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_marginTop="9dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/pumber_assist_et"
+            android:id="@+id/plumbing_assist_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:hint="provide details here.."
-            android:lines="4"
-            android:minLines="4"
-            android:gravity="top|left"
-            android:textSize="15dp"
             android:layout_below="@+id/tv"
-            android:background="@android:drawable/edit_text" />
+            android:background="@android:drawable/edit_text"
+            android:textSize="15dp" />
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btn_plumber_assist"
-        android:text="Submit"
-        android:textColor="#F76C30"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/layout_et"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"/>
+        android:layout_margin="8dp"
+        android:text="Submit"
+        android:textColor="#F76C30" />
 </RelativeLayout>

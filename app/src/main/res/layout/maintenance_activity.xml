@@ -34,12 +34,12 @@
         android:id="@+id/layout_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
         android:layout_below="@+id/heading"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
         android:layout_marginRight="10dp"
-        android:layout_alignBottom="@+id/button">
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/scale_removal_tv"
@@ -60,16 +60,12 @@
             android:hint="enter details"
             android:textSize="15dp" />
 
-
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="#F76C30"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="240dp"
-        android:text="Submit"
-        android:textColor="#F76C30"
-        android:id="@+id/button" />
 </RelativeLayout>
