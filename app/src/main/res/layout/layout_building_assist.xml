@@ -59,10 +59,11 @@
             android:textStyle="bold"
             android:textSize="16dp"
             android:layout_below="@+id/radio_group"
-            android:text="Enter the details" />
+            android:text="Provide details" />
 
         <EditText
             android:id="@+id/building_assist_et"
+            android:background="@drawable/et_bg"
             android:hint="Details goes here..."
             android:inputType="textMultiLine"
             android:layout_marginTop="2dp"
