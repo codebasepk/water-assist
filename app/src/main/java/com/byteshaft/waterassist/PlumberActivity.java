@@ -1,9 +1,10 @@
 package com.byteshaft.waterassist;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class PlumberActivity extends AppCompatActivity {
+public class PlumberActivity extends Activity {
 
 
     @Override
