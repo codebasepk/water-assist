@@ -25,6 +25,7 @@ public class DrainAssistActivity extends AppCompatActivity  implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Drain Assist");
         setContentView(R.layout.layout_activity_drain);
         emergency_unblock = (Button) findViewById(R.id.emergency_unblock);
         drainage_repairs = (Button) findViewById(R.id.drainage_repairs);
