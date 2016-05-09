@@ -1,5 +1,6 @@
 package com.byteshaft.waterassist;
 
+import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 
-public class BuildingAssistActivity extends AppCompatActivity {
+public class BuildingAssistActivity extends Activity {
 
     private EditText details;
     private Button submitButton;
@@ -16,14 +17,11 @@ public class BuildingAssistActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().setBackgroundDrawable(new
-                ColorDrawable(getResources().getColor(R.color.building_assist_pressed)));
         super.onCreate(savedInstanceState);
-        setTitle("Building Assist");
         setContentView(R.layout.layout_building_assist);
 
         details = (EditText) findViewById(R.id.building_assist_et);
-        submitButton = (Button) findViewById(R.id.btn_building_assist);
+        submitButton = (Button) findViewById(R.id.submit);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
     }
 }
