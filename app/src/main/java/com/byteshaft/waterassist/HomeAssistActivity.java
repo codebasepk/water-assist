@@ -38,7 +38,7 @@ public class HomeAssistActivity extends Activity implements RadioGroup.OnChecked
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.submit:
-                // TODO: 09/05/2016 code for sending email 
+                // TODO: 09/05/2016 code for sending email
         }
     }
 }
