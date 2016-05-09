@@ -22,9 +22,9 @@
         <activity android:name=".BuildingAssistActivity"
             android:windowSoftInputMode="adjustPan"/>
 
-        <activity android:name=".HomeAssistActivity"/>
-        <activity android:name=".WaterAssistActivity"/>
-        <activity android:name=".PlumberActivity"/>
+        <activity android:name=".HomeAssistActivity" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".WaterAssistActivity" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".PlumberActivity" android:windowSoftInputMode="adjustPan" />
 
         <activity android:name=".drainassist.EmergencyUnblockActivity"/>
         <activity android:name=".drainassist.DrainageRepairsActivity"/>
