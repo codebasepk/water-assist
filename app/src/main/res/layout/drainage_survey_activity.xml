@@ -4,152 +4,180 @@
     android:layout_height="match_parent"
     android:background="@color/gray">
 
-    <ImageView
-        android:id="@+id/image_view"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/gray"
-        android:src="@drawable/drain_assist_for_package" />
+        android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dip"
-        android:layout_below="@+id/image_view"
-        android:background="#F76C30" />
-
-    <TextView
-        android:textColor="#F76C30"
-        android:text="DRAINAGE"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        android:layout_marginLeft="97dp"/>
-    <TextView
-        android:textColor="#1483C8"
-        android:text="SURVEY"
-        android:textSize="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        android:layout_marginLeft="202dp"/>
-
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_below="@+id/view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="40dp">
-
-        <RadioButton
-            android:id="@+id/toilet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Toilet"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/kitchen_sink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kitchen Sink"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/bathroom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bathroom"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/septic_tank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Septic Tank"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/rain_water_gully"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rain water gully"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/utility_room"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Utility Room"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/rodents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rodents"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/subsidence"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Subsidence"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/other"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Other"
-            android:textSize="15dp" />
-
-
-    </RadioGroup>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radio_group"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        android:id="@+id/layout_et"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp">
-
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter Details"
-            android:textColor="#000"
-            android:textSize="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <EditText
-            android:id="@+id/emergency_unblock_et"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_below="@+id/tv"
-            android:background="@android:drawable/edit_text" />
+            android:layout_margin="5dp"
+            android:orientation="vertical">
 
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                android:src="@drawable/drain_assist_for_package" />
 
-    <Button
-        android:text="Submit"
-        android:textColor="#F76C30"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"/>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/image_view"
+                android:background="#F76C30" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/drainage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:text="DRAINAGE"
+                    android:textColor="#F76C30"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_toRightOf="@+id/drainage"
+                    android:text=" SURVEY"
+                    android:textColor="#1483C8"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Select Assistance :"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/toilet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toilet"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/kitchen_sink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kitchen Sink"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/bathroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bathroom"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/septic_tank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Septic Tank"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rain_water_gully"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rain water gully"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/utility_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Utility Room"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rodents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rodents"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/subsidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subsidence"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:textSize="15dp" />
+
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/layout_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_group"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Enter Details"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/drainage_survey_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv"
+                    android:background="@android:drawable/edit_text"
+                    android:lines="4"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drainage_survey_et"
+                    android:text="Submit"
+                    android:textColor="#F76C30" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
