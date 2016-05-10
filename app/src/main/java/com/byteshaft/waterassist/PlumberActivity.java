@@ -19,7 +19,7 @@ public class PlumberActivity extends Activity implements RadioGroup.OnCheckedCha
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_plumber_assist);
 
-        radioGroup = (RadioGroup) findViewById(R.id.radio_group_plumber_assist);
+        radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         details = (EditText) findViewById(R.id.plumber_assist_et);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup.setOnCheckedChangeListener(this);

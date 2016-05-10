@@ -18,7 +18,7 @@ public class WaterAssistActivity extends Activity implements RadioGroup.OnChecke
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_water_assist);
-        radioGroup = (RadioGroup) findViewById(R.id.water_assist_radio_group);
+        radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         details = (EditText) findViewById(R.id.water_assist_et);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup.setOnCheckedChangeListener(this);
@@ -28,7 +28,7 @@ public class WaterAssistActivity extends Activity implements RadioGroup.OnChecke
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
         switch (checkedId) {
-            case R.id.repair_leaking:
+            case R.id.repair_to_leaking:
                 break;
             case R.id.renewal_pipe:
                 break;
