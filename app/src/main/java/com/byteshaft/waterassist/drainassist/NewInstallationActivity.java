@@ -19,7 +19,6 @@ public class NewInstallationActivity extends Activity implements RadioGroup.OnCh
     private RadioGroup radioGroup;
     private EditText editText;
     private RadioButton radioButton;
-    private String radio_button_Text;
     private String details_text;
 
     @Override
@@ -32,7 +31,6 @@ public class NewInstallationActivity extends Activity implements RadioGroup.OnCh
         radioGroup.setOnCheckedChangeListener(this);
 
         details_text = editText.getText().toString();
-        radio_button_Text = radioButton.getText().toString();
 
         button_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +42,7 @@ public class NewInstallationActivity extends Activity implements RadioGroup.OnCh
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
+        String radio_button_Text = radioButton.getText().toString();
         radioButton = (RadioButton) findViewById(checkedId);
     }
 }
