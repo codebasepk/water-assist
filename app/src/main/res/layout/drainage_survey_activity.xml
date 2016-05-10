@@ -131,6 +131,33 @@
                     android:textSize="15dp" />
 
                 <RadioButton
+                    android:id="@+id/investigate_a_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Investigate a Problem"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/condition_assessment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Condition Assessment"
+                    android:textSize="15dp" />
+                <RadioButton
+                    android:id="@+id/home_buyer_drainage_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home Buyer Drainage Report"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/build_over_survey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Build Over Survey"
+                    android:textSize="15dp" />
+
+                <RadioButton
                     android:id="@+id/other"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -171,7 +198,7 @@
                     android:textSize="15dp" />
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/drainage_survey_et"
                     android:text="Submit"

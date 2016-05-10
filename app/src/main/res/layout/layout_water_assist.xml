@@ -1,124 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray">
 
-    <ImageView
-        android:id="@+id/image_view"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/gray"
-        android:src="@drawable/water_assist_splash" />
+        android:layout_height="match_parent" >
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dip"
-        android:layout_below="@+id/image_view"
-        android:background="#F76C30" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray"
+                android:src="@drawable/water_assist_splash" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/image_view"
+                android:background="#F76C30" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_marginLeft="102dp"
+                    android:text="Water"
+                    android:textColor="#F76C30"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:text="ASSIST"
+                    android:textColor="#1483C8"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/water_assist_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/view"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="Select Assistance :"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/repair_leaking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Repair to leaking Supply Pipe"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/renewal_pipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Renewal of Supply Pipe"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/new_installation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Installation"
+                    android:textSize="15dp" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/layout_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_group"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Enter Details"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/water_assist_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter details here.."
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tv"
+                    android:lines="4"
+                    android:gravity="top|left"
+                    android:background="@android:drawable/edit_text"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        android:layout_marginLeft="120dp"
-        android:text="WATER"
-        android:textColor="#F76C30"
-        android:textSize="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        android:layout_marginLeft="190dp"
-        android:text="ASSIST"
-        android:textColor="#1483C8"
-        android:textSize="20dp" />
-
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="80dp"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/tv_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dp"
-            android:paddingLeft="7dp"
-            android:text="Select Assistance :"
-            android:textColor="@android:color/black"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/repair_leaking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Repair to leaking Supply Pipe"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/renewal_pipe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Renewal of Supply Pipe"
-            android:textSize="15dp" />
-
-        <RadioButton
-            android:id="@+id/new_installation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Installation"
-            android:textSize="15dp" />
-
-    </RadioGroup>
-
-    <RelativeLayout
-        android:id="@+id/layout_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radio_group"
-        android:layout_margin="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="70dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="9dp"
-            android:text="Enter Details"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/water_assist_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv"
-            android:background="@android:drawable/edit_text"
-            android:textSize="15dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/water_assist_et"
-            android:text="Submit"
-            android:textColor="#F76C30" />
-
-    </RelativeLayout>
-
+        android:text="Send Details"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#F76C30" />
 </RelativeLayout>
