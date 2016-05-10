@@ -22,7 +22,7 @@ public class MaintenanceActivity extends Activity {
         setContentView(R.layout.maintenance_activity);
 
         submit_button = (Button) findViewById(R.id.submit);
-        scale_removal_details = (EditText) findViewById(R.id.scale_removal_et);
+        scale_removal_details = (EditText) findViewById(R.id.maintenance_et);
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

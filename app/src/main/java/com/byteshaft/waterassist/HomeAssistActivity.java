@@ -17,7 +17,7 @@ public class HomeAssistActivity extends Activity implements RadioGroup.OnChecked
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home_assist);
-        radioGroup = (RadioGroup) findViewById(R.id.radio_group_home_assist);
+        radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         details = (EditText) findViewById(R.id.home_assist_et);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup.setOnCheckedChangeListener(this);

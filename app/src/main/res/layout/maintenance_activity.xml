@@ -34,7 +34,6 @@
         android:id="@+id/layout_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button"
         android:layout_below="@+id/heading"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -53,19 +52,22 @@
             android:textSize="15dp" />
 
         <EditText
-            android:id="@+id/scale_removal_et"
+            android:id="@+id/maintenance_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lines="4"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
             android:background="@android:drawable/edit_text"
             android:hint="enter details"
             android:textSize="15dp" />
 
         <Button
             android:id="@+id/submit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
             android:textColor="#F76C30"
-            android:layout_marginTop="20dp"/>
+            android:layout_gravity="right" />
     </LinearLayout>
 </RelativeLayout>
