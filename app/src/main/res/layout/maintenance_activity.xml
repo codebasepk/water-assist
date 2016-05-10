@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/heading"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
@@ -44,22 +44,21 @@
             android:id="@+id/scale_removal_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:text="Scale Removal"
-            android:textColor="#000"
-            android:textSize="15dp" />
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16dp" />
 
         <EditText
             android:id="@+id/maintenance_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:lines="4"
             android:inputType="textMultiLine"
             android:gravity="top|left"
             android:background="@android:drawable/edit_text"
-            android:hint="enter details"
+            android:hint="Enter details here.."
             android:textSize="15dp" />
 
         <Button

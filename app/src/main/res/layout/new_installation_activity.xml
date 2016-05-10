@@ -55,15 +55,14 @@
                 android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
                 android:layout_below="@+id/view">
 
                 <TextView
                     android:id="@+id/tv_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
                     android:paddingBottom="5dp"
                     android:text="Select Assistance :"
                     android:textColor="@android:color/black"
@@ -113,17 +112,18 @@
                     android:id="@+id/tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
                     android:text="Enter Details"
                     android:textColor="#000"
-                    android:textSize="15dp" />
+                    android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/new_installation_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter details here.."
                     android:layout_below="@+id/tv"
                     android:lines="4"
                     android:inputType="textMultiLine"
