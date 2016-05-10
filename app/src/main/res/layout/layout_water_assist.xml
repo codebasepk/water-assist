@@ -9,10 +9,10 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/image_view"
@@ -20,7 +20,7 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/gray"
-                android:src="@drawable/drain_assist_for_package" />
+                android:src="@drawable/water_assist_splash" />
 
             <View
                 android:id="@+id/view"
@@ -30,12 +30,12 @@
                 android:background="#F76C30" />
 
             <RelativeLayout
-                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:gravity="center">
 
                 <TextView
-                    android:id="@+id/emergency"
+                    android:id="@+id/water"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="WATER"
@@ -45,8 +45,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/water"
                     android:text=" ASSIST"
-                    android:layout_toRightOf="@+id/emergency"
                     android:textColor="#1483C8"
                     android:textSize="20dp" />
             </RelativeLayout>
@@ -54,10 +54,10 @@
             <RadioGroup
                 android:id="@+id/radio_group"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_below="@+id/view">
+                android:layout_marginTop="30dp">
 
                 <TextView
                     android:id="@+id/tv_2"
@@ -119,18 +119,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv"
-                    android:inputType="textMultiLine"
-                    android:gravity="top|left"
-                    android:lines="4"
                     android:background="@android:drawable/edit_text"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
                     android:textSize="15dp" />
 
                 <Button
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/water_assist_et"
                     android:layout_alignParentRight="true"
+                    android:layout_below="@+id/water_assist_et"
                     android:text="Submit"
                     android:textColor="#F76C30" />
 
