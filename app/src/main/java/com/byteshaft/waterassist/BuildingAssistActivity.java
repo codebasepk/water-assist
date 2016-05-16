@@ -14,12 +14,14 @@ public class BuildingAssistActivity extends Activity implements RadioGroup.OnChe
     private EditText details;
     private Button submitButton;
     private RadioGroup radioGroup;
-    private String sRadioButtonText;
+    private String mRadioText;
+    private String mReceverEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_building_assist);
+        mReceverEmail = getString(R.string.email_string);
 
         details = (EditText) findViewById(R.id.building_assist_et);
         submitButton = (Button) findViewById(R.id.submit);
@@ -32,15 +34,15 @@ public class BuildingAssistActivity extends Activity implements RadioGroup.OnChe
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
         switch (checkedId) {
             case R.id.building_survey:
-                sRadioButtonText = "Building Survey";
+                mRadioText = "Building Survey";
                 break;
 
             case R.id.repair_survey:
-                sRadioButtonText = "Repair Survey";
+                mRadioText = "Repair Survey";
                 break;
 
             case R.id.insurance_survey:
-                sRadioButtonText = "Insurance Survey";
+                mRadioText = "Insurance Survey";
                 break;
         }
     }
@@ -50,12 +52,12 @@ public class BuildingAssistActivity extends Activity implements RadioGroup.OnChe
         switch (view.getId()) {
             case R.id.submit:
                 String finalMessage = details.getText().toString();
-                System.out.println(sRadioButtonText + finalMessage);
+                System.out.println(mRadioText + finalMessage);
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"s9iper1@gmail.com"});
-                intent.putExtra(Intent.EXTRA_SUBJECT, sRadioButtonText);
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
+                intent.putExtra(Intent.EXTRA_SUBJECT, mRadioText);
                 intent.putExtra(Intent.EXTRA_TEXT, finalMessage);
                 startActivity(Intent.createChooser(intent, "Send Email"));
         }
