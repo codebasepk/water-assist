@@ -10,9 +10,6 @@ import android.widget.RadioGroup;
 
 import com.byteshaft.waterassist.R;
 
-/**
- * Created by husnain on 5/7/16.
- */
 public class EmergencyUnblockActivity extends Activity implements RadioGroup.OnCheckedChangeListener {
 
     private Button button_submit;
