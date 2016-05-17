@@ -3,33 +3,32 @@
     package="com.byteshaft.waterassist">
 
     <application
+        android:name=".AppGlobals"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DrainAssistActivity"/>
-
+        <activity android:name=".DrainAssistActivity" />
         <activity android:name=".BuildingAssistActivity" />
         <activity android:name=".HomeAssistActivity" />
         <activity android:name=".WaterAssistActivity" />
         <activity android:name=".PlumberActivity" />
-
-        <activity android:name=".drainassist.EmergencyUnblockActivity"/>
-        <activity android:name=".drainassist.DrainageRepairsActivity"/>
-        <activity android:name=".drainassist.DrainageSurveyActivity"/>
-        <activity android:name=".drainassist.MaintenanceActivity"/>
-        <activity android:name=".drainassist.NewInstallationActivity"/>
-        <activity android:name=".drainassist.SepticOrTreatmentTankActivity"/>
+        <activity android:name=".drainassist.EmergencyUnblockActivity" />
+        <activity android:name=".drainassist.DrainageRepairsActivity" />
+        <activity android:name=".drainassist.DrainageSurveyActivity" />
+        <activity android:name=".drainassist.MaintenanceActivity" />
+        <activity android:name=".drainassist.NewInstallationActivity" />
+        <activity android:name=".drainassist.SepticOrTreatmentTankActivity" />
+        <activity android:name=".DetailsActivity"></activity>
     </application>
 
 </manifest>
