@@ -59,7 +59,7 @@ public class DetailsActivity extends AppCompatActivity {
                     sb.append(emailAddress.getText().toString());
                     sb.append("\n");
                     Helpers.saveDataToSharedPreferences("basic", sb.toString());
-
+                    Helpers.detailsStatus(true);
                     startActivity(new Intent(DetailsActivity.this, MainActivity.class));
                 }
 
