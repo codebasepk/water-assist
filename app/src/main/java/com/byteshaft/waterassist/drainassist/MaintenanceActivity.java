@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.byteshaft.waterassist.Helpers;
 import com.byteshaft.waterassist.R;
 
 public class MaintenanceActivity extends Activity {
@@ -29,7 +30,8 @@ public class MaintenanceActivity extends Activity {
 
                 String detail_values_scale_removal = scale_removal_details.getText().toString();
                 System.out.println(detail_values_scale_removal);
-                String finalMessage = scale_removal_details.getText().toString();
+                String finalMessage = Helpers.getStringFromSharedPreferences("basic") +
+                        scale_removal_details.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
