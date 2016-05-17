@@ -14,7 +14,7 @@ public class Helpers {
         sharedPreferences.edit().putString(key, value).apply();
     }
 
-    public static String getStringFromSharedPreferences(String basic, String key) {
+    public static String getStringFromSharedPreferences(String key) {
         SharedPreferences sharedPreferences = getPreferenceManager();
         return sharedPreferences.getString(key, "");
 
