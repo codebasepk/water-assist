@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context="com.byteshaft.waterassist.DetailsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/name"
+                android:singleLine="true"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Name"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/address"
+
+                android:singleLine="true"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Address"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/post_code"
+                android:singleLine="true"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Post code"
+                android:inputType="number"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/home_number"
+                android:singleLine="true"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Home Number"
+                android:inputType="phone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/mobile_number"
+                android:singleLine="true"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Mobile Number"
+                android:inputType="phone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/email_address"
+                android:singleLine="true"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Email Address"
+                android:inputType="textEmailAddress"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_marginTop="10dp"
+                android:text="Save"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
