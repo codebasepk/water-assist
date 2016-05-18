@@ -43,7 +43,6 @@
 
             <EditText
                 android:id="@+id/address"
-
                 android:singleLine="true"
                 android:background="@android:drawable/edit_text"
                 android:hint="Enter Address"
@@ -107,11 +106,11 @@
                     android:singleLine="true"
                     android:background="@android:drawable/edit_text"
                     android:hint="Billing name"
-                    android:inputType="textEmailAddress"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content" />
 
                 <CheckBox
+                    android:id="@+id/checkbox_name"
                     android:layout_toRightOf="@+id/billing_name"
                     android:layout_marginTop="25dp"
                     android:paddingRight="2dp"
@@ -121,6 +120,7 @@
                     android:layout_height="wrap_content" />
 
                 <CheckBox
+                    android:id="@+id/checkbox_address"
                     android:layout_toRightOf="@+id/billing_address"
                     android:layout_marginTop="70dp"
                     android:gravity="center"
@@ -135,7 +135,6 @@
                     android:singleLine="true"
                     android:background="@android:drawable/edit_text"
                     android:hint="Billing Address"
-                    android:inputType="textEmailAddress"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content" />
 
@@ -146,7 +145,9 @@
                 android:id="@+id/button_save"
                 android:layout_marginTop="10dp"
                 android:text="Save"
-                android:layout_width="250dp"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
