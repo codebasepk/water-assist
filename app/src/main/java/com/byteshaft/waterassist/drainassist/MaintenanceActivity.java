@@ -15,15 +15,17 @@ public class MaintenanceActivity extends Activity {
     private Button submit_button;
     private EditText scale_removal_details;
     private String mEmailSubject = "Scale Removal";
-    private String mReceverEmail;
+    private String mReceiverEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maintenance_activity);
-        mReceverEmail = getString(R.string.email_string);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
+        mReceiverEmail = getString(R.string.email_string);
         submit_button = (Button) findViewById(R.id.submit);
         scale_removal_details = (EditText) findViewById(R.id.maintenance_et);
+        scale_removal_details.setSelected(false);
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,12 +36,18 @@ public class MaintenanceActivity extends Activity {
                         scale_removal_details.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceiverEmail});
                 intent.putExtra(Intent.EXTRA_SUBJECT, mEmailSubject);
                 intent.putExtra(Intent.EXTRA_TEXT, finalMessage);
                 startActivity(Intent.createChooser(intent, "Send Email"));
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

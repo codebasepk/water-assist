@@ -15,16 +15,18 @@ public class WaterAssistActivity extends Activity implements RadioGroup.OnChecke
     private EditText details;
     private Button submitButton;
     private String mRadioText;
-    private String mReceverEmail;
+    private String mReceiverEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_water_assist);
-        mReceverEmail = getString(R.string.email_string);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
+        mReceiverEmail = getString(R.string.email_string);
 
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         details = (EditText) findViewById(R.id.water_assist_et);
+        details.setSelected(false);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup.setOnCheckedChangeListener(this);
         submitButton.setOnClickListener(this);
@@ -54,11 +56,17 @@ public class WaterAssistActivity extends Activity implements RadioGroup.OnChecke
                 System.out.println(mRadioText + finalMessage);
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceiverEmail});
                 intent.putExtra(Intent.EXTRA_SUBJECT, mRadioText);
                 intent.putExtra(Intent.EXTRA_TEXT, finalMessage);
                 startActivity(Intent.createChooser(intent, "Send Email"));
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

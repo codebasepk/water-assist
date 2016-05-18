@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private String mName;
     private String mAddress;
-    private String mpostCode;
+    private String mPostCode;
     private String mHomeNumber;
     private String mMobileNumber;
     private String mEmailAddress;
@@ -30,6 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
         setTitle("Provide details");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
         name = (EditText) findViewById(R.id.name);
         address = (EditText) findViewById(R.id.address);
         postCode = (EditText) findViewById(R.id.post_code);
@@ -75,7 +76,7 @@ public class DetailsActivity extends AppCompatActivity {
         boolean valid = true;
         mName = name.getText().toString();
         mAddress = address.getText().toString();
-        mpostCode = postCode.getText().toString();
+        mPostCode = postCode.getText().toString();
         mHomeNumber = homeNumber.getText().toString();
         mMobileNumber = mobileNumber.getText().toString();
         mEmailAddress = emailAddress.getText().toString();
@@ -94,7 +95,7 @@ public class DetailsActivity extends AppCompatActivity {
             address.setError(null);
         }
 
-        if (mpostCode.trim().isEmpty() || mpostCode.length() < 3) {
+        if (mPostCode.trim().isEmpty() || mPostCode.length() < 3) {
             postCode.setError("Enter post code");
             valid = false;
         } else {
@@ -124,5 +125,11 @@ public class DetailsActivity extends AppCompatActivity {
 
 
         return valid;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

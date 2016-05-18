@@ -20,17 +20,19 @@ public class DrainageSurveyActivity extends Activity implements RadioGroup.OnChe
     private RadioButton radioButton;
     private String details_text;
 
-    private String mReceverEmail;
+    private String mReceiverEmail;
     private String radio_button_Text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drainage_survey_activity);
-        mReceverEmail = getString(R.string.email_string);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
+        mReceiverEmail = getString(R.string.email_string);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         button_submit = (Button) findViewById(R.id.submit);
         editText = (EditText) findViewById(R.id.drainage_survey_et);
+        editText.setSelected(false);
         radioGroup.setOnCheckedChangeListener(this);
 
         details_text = editText.getText().toString();
@@ -45,7 +47,7 @@ public class DrainageSurveyActivity extends Activity implements RadioGroup.OnChe
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceiverEmail});
                 intent.putExtra(Intent.EXTRA_SUBJECT, radio_button_Text);
                 intent.putExtra(Intent.EXTRA_TEXT, finalMessage);
                 startActivity(Intent.createChooser(intent, "Send Email"));
@@ -58,5 +60,11 @@ public class DrainageSurveyActivity extends Activity implements RadioGroup.OnChe
         radioButton = (RadioButton) findViewById(checkedId);
         radio_button_Text = radioButton.getText().toString();
         System.out.println(radio_button_Text);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

@@ -27,6 +27,7 @@ public class DrainAssistActivity extends AppCompatActivity  implements View.OnCl
         super.onCreate(savedInstanceState);
         setTitle("Drain Assist");
         setContentView(R.layout.layout_activity_drain);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
         emergency_unblock = (Button) findViewById(R.id.emergency_unblock);
         drainage_repairs = (Button) findViewById(R.id.drainage_repairs);
         drainage_survey = (Button) findViewById(R.id.drainage_survey);
@@ -64,5 +65,11 @@ public class DrainAssistActivity extends AppCompatActivity  implements View.OnCl
                 startActivity(new Intent(getApplicationContext(), SepticOrTreatmentTankActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

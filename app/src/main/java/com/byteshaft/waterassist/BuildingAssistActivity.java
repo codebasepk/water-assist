@@ -15,15 +15,17 @@ public class BuildingAssistActivity extends Activity implements RadioGroup.OnChe
     private Button submitButton;
     private RadioGroup radioGroup;
     private String mRadioText;
-    private String mReceverEmail;
+    private String mReceiverEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_building_assist);
-        mReceverEmail = getString(R.string.email_string);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
+        mReceiverEmail = getString(R.string.email_string);
 
         details = (EditText) findViewById(R.id.building_assist_et);
+        details.setSelected(false);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         submitButton.setOnClickListener(this);
@@ -57,10 +59,16 @@ public class BuildingAssistActivity extends Activity implements RadioGroup.OnChe
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{mReceiverEmail});
                 intent.putExtra(Intent.EXTRA_SUBJECT, mRadioText);
                 intent.putExtra(Intent.EXTRA_TEXT, finalMessage);
                 startActivity(Intent.createChooser(intent, "Send Email"));
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }
