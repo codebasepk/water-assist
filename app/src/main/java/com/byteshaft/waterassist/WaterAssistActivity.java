@@ -50,8 +50,8 @@ public class WaterAssistActivity extends Activity implements RadioGroup.OnChecke
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.submit:
-                System.out.println(Helpers.getStringFromSharedPreferences("basic"));
-                String finalMessage = details.getText().toString();
+                String finalMessage = Helpers.getStringFromSharedPreferences("basic") +
+                        details.getText().toString();
                 System.out.println(mRadioText + finalMessage);
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");

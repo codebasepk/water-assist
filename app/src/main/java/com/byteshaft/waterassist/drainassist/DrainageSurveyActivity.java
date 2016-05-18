@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.byteshaft.waterassist.Helpers;
 import com.byteshaft.waterassist.R;
 
 public class DrainageSurveyActivity extends Activity implements RadioGroup.OnCheckedChangeListener {
@@ -39,7 +40,8 @@ public class DrainageSurveyActivity extends Activity implements RadioGroup.OnChe
             @Override
             public void onClick(View v) {
 
-                String finalMessage = editText.getText().toString();
+                String finalMessage = Helpers.getStringFromSharedPreferences("basic") +
+                        editText.getText().toString();
                 System.out.println(radio_button_Text + finalMessage);
 
                 Intent intent = new Intent(Intent.ACTION_SEND);

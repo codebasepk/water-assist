@@ -46,7 +46,9 @@ public class PlumberActivity extends Activity implements RadioGroup.OnCheckedCha
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.submit:
-                String finalMessage = details.getText().toString();
+
+                String finalMessage = Helpers.getStringFromSharedPreferences("basic") +
+                        details.getText().toString();
                 System.out.println(mRadioText + finalMessage);
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
