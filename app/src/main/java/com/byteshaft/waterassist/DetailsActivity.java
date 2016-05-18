@@ -46,18 +46,21 @@ public class DetailsActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 } else {
                     StringBuilder sb = new StringBuilder();
-                    sb.append(name.getText().toString());
+                    sb.append("Name: " + name.getText().toString());
                     sb.append("\n");
-                    sb.append(address.getText().toString());
+                    sb.append("Address: " + address.getText().toString());
                     sb.append("\n");
-                    sb.append(postCode.getText().toString());
+                    sb.append("Post code: " + postCode.getText().toString());
                     sb.append("\n");
-                    sb.append(homeNumber.getText().toString());
+                    sb.append("Home Number: " + homeNumber.getText().toString());
                     sb.append("\n");
-                    sb.append(mobileNumber.getText().toString());
+                    sb.append("Mobile Number: " + mobileNumber.getText().toString());
                     sb.append("\n");
-                    sb.append(emailAddress.getText().toString());
+                    sb.append("Email Address: " + emailAddress.getText().toString());
                     sb.append("\n");
+                    sb.append("\n");
+                    sb.append("Details are: \n ");
+
                     Helpers.saveDataToSharedPreferences("basic", sb.toString());
                     Helpers.detailsStatus(true);
                     startActivity(new Intent(DetailsActivity.this, MainActivity.class));
