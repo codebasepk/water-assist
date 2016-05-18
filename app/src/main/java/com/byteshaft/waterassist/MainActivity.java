@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
         drainAssist = (Button) findViewById(R.id.drain_assist);
         buildingAssist = (Button) findViewById(R.id.building_assist);
         homeBuyerAssist = (Button) findViewById(R.id.home_buyer_assist);
@@ -56,5 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(getApplicationContext(), BuildingAssistActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

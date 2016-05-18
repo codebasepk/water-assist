@@ -20,6 +20,7 @@ public class MaintenanceActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maintenance_activity);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
         mReceverEmail = getString(R.string.email_string);
         submit_button = (Button) findViewById(R.id.submit);
         scale_removal_details = (EditText) findViewById(R.id.maintenance_et);
@@ -39,5 +40,11 @@ public class MaintenanceActivity extends Activity {
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }

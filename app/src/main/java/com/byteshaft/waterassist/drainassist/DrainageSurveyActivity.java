@@ -26,6 +26,7 @@ public class DrainageSurveyActivity extends Activity implements RadioGroup.OnChe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drainage_survey_activity);
+        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
         mReceverEmail = getString(R.string.email_string);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         button_submit = (Button) findViewById(R.id.submit);
@@ -56,5 +57,11 @@ public class DrainageSurveyActivity extends Activity implements RadioGroup.OnChe
         radioButton = (RadioButton) findViewById(checkedId);
         radio_button_Text = radioButton.getText().toString();
         System.out.println(radio_button_Text);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_right_in, R.anim.anim_right_out);
     }
 }
