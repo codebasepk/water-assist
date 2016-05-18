@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -19,7 +20,7 @@ public class DrainageRepairsActivity extends Activity implements RadioGroup.OnCh
     private EditText editText;
     private RadioButton radioButton;
     private String details_text;
-    private String mReceverEmail;
+    private String mReceiverEmail;
     private String radio_button_Text;
 
     @Override
@@ -27,10 +28,11 @@ public class DrainageRepairsActivity extends Activity implements RadioGroup.OnCh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drainage_repairs_activity);
         overridePendingTransition(R.anim.anim_left_in, R.anim.anim_left_out);
-        mReceverEmail = getString(R.string.email_string);
+        mReceiverEmail = getString(R.string.email_string);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         button_submit = (Button) findViewById(R.id.submit);
         editText = (EditText) findViewById(R.id.drainage_repairs_et);
+        editText.setSelected(false);
         radioGroup.setOnCheckedChangeListener(this);
 
         details_text = editText.getText().toString();
@@ -44,7 +46,7 @@ public class DrainageRepairsActivity extends Activity implements RadioGroup.OnCh
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceverEmail});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mReceiverEmail});
                 intent.putExtra(Intent.EXTRA_SUBJECT, radio_button_Text);
                 intent.putExtra(Intent.EXTRA_TEXT, finalMessage);
                 startActivity(Intent.createChooser(intent, "Send Email"));

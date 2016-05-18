@@ -25,6 +25,7 @@ public class BuildingAssistActivity extends Activity implements RadioGroup.OnChe
         mReceiverEmail = getString(R.string.email_string);
 
         details = (EditText) findViewById(R.id.building_assist_et);
+        details.setSelected(false);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         submitButton.setOnClickListener(this);

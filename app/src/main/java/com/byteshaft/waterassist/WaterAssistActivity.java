@@ -26,6 +26,7 @@ public class WaterAssistActivity extends Activity implements RadioGroup.OnChecke
 
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         details = (EditText) findViewById(R.id.water_assist_et);
+        details.setSelected(false);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup.setOnCheckedChangeListener(this);
         submitButton.setOnClickListener(this);

@@ -25,6 +25,7 @@ public class PlumberActivity extends Activity implements RadioGroup.OnCheckedCha
         mReceiverEmail = getString(R.string.email_string);
         radioGroup = (RadioGroup) findViewById(R.id.radio_group);
         details = (EditText) findViewById(R.id.plumber_assist_et);
+        details.setSelected(false);
         submitButton = (Button) findViewById(R.id.submit);
         radioGroup.setOnCheckedChangeListener(this);
         submitButton.setOnClickListener(this);
