@@ -52,13 +52,15 @@ public class DetailsActivity extends AppCompatActivity {
                     sb.append("\n");
                     sb.append("Post code: " + postCode.getText().toString());
                     sb.append("\n");
-                    sb.append("Home Number " + homeNumber.getText().toString());
+                    sb.append("Home Number: " + homeNumber.getText().toString());
                     sb.append("\n");
-                    sb.append("Mobile Number " + mobileNumber.getText().toString());
+                    sb.append("Mobile Number: " + mobileNumber.getText().toString());
                     sb.append("\n");
                     sb.append("Email Address: " + emailAddress.getText().toString());
                     sb.append("\n");
-                    sb.append("Details are :");
+                    sb.append("\n");
+                    sb.append("Details are: \n ");
+
                     Helpers.saveDataToSharedPreferences("basic", sb.toString());
                     Helpers.detailsStatus(true);
                     startActivity(new Intent(DetailsActivity.this, MainActivity.class));
